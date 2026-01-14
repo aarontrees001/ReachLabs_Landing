@@ -297,9 +297,9 @@ body {
 .logo-container img {
   width: 150px;           /* Set a consistent width */
   height: auto;           /* Maintain aspect ratio */
-  opacity: 0.7;           /* Optional: slightly faded look */
+  opacity: 1.0;           /* Optional: slightly faded look */
   transition: opacity 0.3s ease;
-  filter: grayscale(100%); /* Optional: black and white effect */
+  filter: grayscale(0%); /* Optional: black and white effect */
 }
 
 .logo-container img:hover {
