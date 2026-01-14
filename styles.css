@@ -68,7 +68,7 @@ body {
 
 /* Hover & Focus States (Critical for 2026 UX) */
 .cta-button:hover {
-  background-color: #4a4a4a; /* Slightly lighter charcoal on hover */
+  background-color: #93d50a; /* Slightly lighter charcoal on hover */
   transform: translateY(-2px); /* Subtle lift effect */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
@@ -123,7 +123,7 @@ body {
 }
 
 .divider-section h2 {
-  font-size: 2.5rem;         /* Standard H2 size for 2026 layouts */
+  font-size: 2.0rem;         /* Standard H2 size for 2026 layouts */
   color: #333333;            /* Matches your Dark Charcoal theme */
   margin: 0;
   font-weight: 700;          /* Makes the headline bold and impactful */
@@ -134,5 +134,52 @@ body {
   .divider-section h2 {
     font-size: 1.8rem;       /* Slightly smaller for mobile screens */
     padding: 0 20px;         /* Prevents text from touching screen edges */
+  }
+}
+/* Subheader styling */
+.section-subheader {
+  font-size: 1.25rem;
+  color: #555555; /* Slightly lighter than charcoal for hierarchy */
+  margin-bottom: 40px;
+}
+
+/* Horizontal list container */
+.feature-list {
+  display: flex;
+  justify-content: center; /* Centers the bullets horizontally */
+  gap: 40px;               /* Space between bullet items */
+  list-style: none;        /* Removes default dots */
+  padding: 0;
+  flex-wrap: wrap;         /* Allows stacking on smaller screens */
+}
+
+/* Individual list items */
+.feature-list li {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  color: #333333;
+}
+
+/* Adding the Check Mark (2026 Modern approach) */
+.feature-list li::before {
+  content: "✓";            /* The check mark symbol */
+  margin-right: 10px;
+  color: #2e7d32;          /* Forest green color for the check */
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Mobile Adaptation: Stack the bullets vertically on small screens */
+@media (max-width: 768px) {
+  .feature-list {
+    flex-direction: column;
+    align-items: flex-start; /* Aligns to left on mobile for readability */
+    display: inline-block;   /* Keeps the group centered as a block */
+    text-align: left;
+  }
+  
+  .feature-list li {
+    margin-bottom: 15px;
   }
 }
