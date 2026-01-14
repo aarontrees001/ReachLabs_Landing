@@ -1,0 +1,138 @@
+body {
+  /* Sets font to a modern sans-serif stack */
+  font-family: Arial, Helvetica, sans-serif; 
+  
+  /* Sets text to "Dark Charcoal" (Hex: #333333) */
+  color: #333333; 
+}
+.hero {
+  display: flex;
+  align-items: center; /* Centers content vertically */
+  min-height: 80vh;    /* Makes the section tall */
+  background-color: #ffffff;
+}
+
+.hero-content, .hero-image {
+  flex: 1;             /* Forces both sides to take 50% width */
+  padding: 40px;
+}
+
+.logo {
+  /* Increased from 80px to 800px */
+  width: 800px; 
+  height: auto;       /* Maintains original aspect ratio to prevent stretching */
+  margin-bottom: 20px;
+  display: block;      /* Helps with alignment in modern layouts */
+}
+
+@media (max-width: 768px) {
+  .logo {
+    width: 80%; /* Scales to 80% of the screen width on mobile */
+  }
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.hero-image img {
+  width: 100%;         /* Makes image fill its 50% container */
+  height: auto;
+  border-radius: 8px;  /* Optional: rounded corners */
+}
+
+/* Responsive: Stacks them on top of each other for mobile */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 16px 32px;
+  background-color: #333333; /* Dark Charcoal to match your theme */
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px; /* Modern rounded corners */
+  transition: all 0.3s ease; /* Smooth hover transition */
+  
+  /* Accessibility: Ensure large enough tap target (min 44px) */
+  min-width: 200px;
+  text-align: center;
+}
+
+/* Hover & Focus States (Critical for 2026 UX) */
+.cta-button:hover {
+  background-color: #4a4a4a; /* Slightly lighter charcoal on hover */
+  transform: translateY(-2px); /* Subtle lift effect */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:focus {
+  outline: 3px solid #007bff; /* Clear focus indicator for keyboard users */
+  outline-offset: 4px;
+}
+/* Styling for the text line */
+.phone-call {
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #333333;
+}
+
+/* Enhancing the clickable phone link */
+.phone-link {
+  color: #333333;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* Mobile-Specific Adaptations (Media Query) */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column; /* Stacks image and text vertically */
+    text-align: center;
+    padding: 20px;
+  }
+
+  .logo {
+    width: 60%; /* Scales down the 10x logo so it fits on mobile screens */
+    margin: 0 auto 20px;
+  }
+
+  .cta-button {
+    width: 100%; /* Makes button full-width for easier thumb tapping */
+    box-sizing: border-box;
+  }
+
+  .phone-link {
+    display: inline-block;
+    padding: 10px 0; /* Increases tap target size to meet 2026 accessibility standards */
+  }
+}
+.divider-section {
+  width: 100%;
+  padding: 60px 0;           /* Creates vertical space above and below the text */
+  text-align: center;        /* Centers the H2 text horizontally */
+  border-top: 1px solid #e0e0e0; /* Optional: adds a subtle line above the section */
+  background-color: #ffffff;
+}
+
+.divider-section h2 {
+  font-size: 2.5rem;         /* Standard H2 size for 2026 layouts */
+  color: #333333;            /* Matches your Dark Charcoal theme */
+  margin: 0;
+  font-weight: 700;          /* Makes the headline bold and impactful */
+}
+
+/* Mobile Adjustment */
+@media (max-width: 768px) {
+  .divider-section h2 {
+    font-size: 1.8rem;       /* Slightly smaller for mobile screens */
+    padding: 0 20px;         /* Prevents text from touching screen edges */
+  }
+}
