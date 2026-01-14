@@ -114,6 +114,13 @@ body {
     padding: 10px 0; /* Increases tap target size to meet 2026 accessibility standards */
   }
 }
+/* Apply this to every section after the Hero for consistent dividers */
+.divider-top {
+  border-top: 1px solid #e0e0e0; /* Subtle light gray line */
+  padding-top: 80px;            /* Consistent breathing room at the top */
+  padding-bottom: 80px;         /* Consistent breathing room at the bottom */
+}
+
 .divider-section {
   width: 100%;
   padding: 60px 0;           /* Creates vertical space above and below the text */
@@ -121,14 +128,18 @@ body {
   border-top: 1px solid #e0e0e0; /* Optional: adds a subtle line above the section */
   background-color: #ffffff;
 }
-
-.divider-section h2 {
-  font-size: 2.0rem;         /* Standard H2 size for 2026 layouts */
-  color: #333333;            /* Matches your Dark Charcoal theme */
-  margin: 0;
-  font-weight: 700;          /* Makes the headline bold and impactful */
+/* Update: Makes both section headers match in size and color */
+.divider-section h2, 
+.section-title {
+  font-size: 2.5rem;   /* Large, consistent size */
+  color: #333333;      /* Dark Charcoal */
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+  text-transform: none; 
+  letter-spacing: normal;
+  display: block;      /* Ensures it takes up the full width */
 }
-
 /* Mobile Adjustment */
 @media (max-width: 768px) {
   .divider-section h2 {
@@ -165,7 +176,7 @@ body {
 .feature-list li::before {
   content: "✓";            /* The check mark symbol */
   margin-right: 10px;
-  color: #2e7d32;          /* Forest green color for the check */
+  color: #52bac3;          /* Teal color for the check */
   font-weight: bold;
   font-size: 1.2rem;
 }
@@ -183,3 +194,94 @@ body {
     margin-bottom: 15px;
   }
 }
+/* Apply this to every section after the Hero for consistent dividers */
+.divider-top {
+  border-top: 1px solid #e0e0e0; /* Subtle light gray line */
+  padding-top: 80px;            /* Consistent breathing room at the top */
+  padding-bottom: 80px;         /* Consistent breathing room at the bottom */
+}
+
+.what-we-do {
+  padding: 80px 20px;
+  background-color: #f9f9f9; /* Light contrast to the white sections */
+  text-align: center;
+}
+/* Update: Makes icons 4x bigger */
+.card .icon {
+  font-size: 4rem;      /* Scaled up from 1rem to 4rem */
+  margin-bottom: 25px;  /* Added a bit more space under the larger icon */
+  display: block;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.card {
+  background: #ffffff;
+  padding: 40px 30px;
+  border: 1px solid #eee;
+  border-radius: 4px; /* Minimal rounding for a professional feel */
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Subtle interaction for 2026 UX */
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  color: #333333;
+  margin: 20px 0;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.card li {
+  margin-bottom: 12px;
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.4;
+  position: relative;
+  padding-left: 20px;
+}
+
+/* Minimal line bullet */
+.card li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: #ccc;
+}
+
+.supporting-line {
+  margin-top: 60px;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #333333;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Mobile Responsive */
+@media (max-width: 900px) {
+  .card-grid {
+    grid-template-columns: 1fr; /* Stacks cards on mobile */
+  }
+}
+/* Apply this to every section after the Hero for consistent dividers */
+.divider-top {
+  border-top: 1px solid #e0e0e0; /* Subtle light gray line */
+  padding-top: 80px;            /* Consistent breathing room at the top */
+  padding-bottom: 80px;         /* Consistent breathing room at the bottom */
+}
+
