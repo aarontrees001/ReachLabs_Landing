@@ -284,4 +284,41 @@ body {
   padding-top: 80px;            /* Consistent breathing room at the top */
   padding-bottom: 80px;         /* Consistent breathing room at the bottom */
 }
+.final-cta {
+  background-color: #fcfcfc; /* Slight brand accent */
+  text-align: center;
+  padding: 100px 20px;       /* Significant vertical space for impact */
+}
+
+.cta-container {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.final-cta h2 {
+  font-size: 3rem;           /* Strong closing headline */
+  color: #333333;            /* Your Dark Charcoal color */
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.cta-support {
+  font-size: 1.25rem;
+  color: #555555;
+  margin-bottom: 45px;       /* Space between copy and button */
+  line-height: 1.6;
+}
+
+/* Reuses your existing .cta-button, .phone-call, and .phone-link styles */
+
+/* Responsive adjustment for 2026 mobile standards */
+@media (max-width: 768px) {
+  .final-cta h2 {
+    font-size: 2.2rem;
+  }
+  
+  .final-cta {
+    padding: 80px 20px;
+  }
+}
 
