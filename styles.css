@@ -278,6 +278,35 @@ body {
     grid-template-columns: 1fr; /* Stacks cards on mobile */
   }
 }
+.logo-area {
+  padding: 50px 0;
+  background-color: #f9f9f9; /* Optional background */
+  text-align: center;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center; /* Centers logos horizontally */
+  align-items: center;     /* Centers logos vertically */
+  flex-wrap: wrap;        /* Moves logos to next line on small screens */
+  gap: 40px;              /* Spacing between logos */
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.logo-container img {
+  width: 150px;           /* Set a consistent width */
+  height: auto;           /* Maintain aspect ratio */
+  opacity: 0.7;           /* Optional: slightly faded look */
+  transition: opacity 0.3s ease;
+  filter: grayscale(100%); /* Optional: black and white effect */
+}
+
+.logo-container img:hover {
+  opacity: 1;
+  filter: grayscale(0%);  /* Returns to color on hover */
+}
+
 /* Apply this to every section after the Hero for consistent dividers */
 .divider-top {
   border-top: 1px solid #e0e0e0; /* Subtle light gray line */
