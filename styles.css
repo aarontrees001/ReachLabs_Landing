@@ -102,6 +102,7 @@ body {
   .logo {
     width: 60%; /* Scales down the 10x logo so it fits on mobile screens */
     margin: 0 auto 20px;
+    transform: scale(2); /* Visually doubles the size */
   }
 
   .cta-button {
