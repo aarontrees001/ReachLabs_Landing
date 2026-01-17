@@ -54,7 +54,7 @@ body {
   display: inline-block;
   margin-top: 25px;
   padding: 16px 32px;
-  background-color: #333333; /* Dark Charcoal to match your theme */
+  background-color: #93d50a; /* Dark Charcoal to match your theme */
   color: #ffffff;
   text-decoration: none;
   font-weight: bold;
@@ -68,7 +68,7 @@ body {
 
 /* Hover & Focus States (Critical for 2026 UX) */
 .cta-button:hover {
-  background-color: #93d50a; /* Slightly lighter charcoal on hover */
+  background-color: #42bac3; /* Slightly lighter charcoal on hover */
   transform: translateY(-2px); /* Subtle lift effect */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
