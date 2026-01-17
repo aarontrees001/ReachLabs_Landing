@@ -51,20 +51,26 @@ body {
 }
 
 .cta-button {
-  display: inline-block;
-  margin-top: 25px;
-  padding: 16px 32px;
-  background-color: #93d50a; /* Dark Charcoal to match your theme */
+  /* 1. Centering Logic */
+  display: block;           /* Changed from inline-block to block */
+  margin: 25px auto 0;      /* Top: 25px, Sides: auto (centers it), Bottom: 0 */
+  
+  /* 2. Sizing (.5x bigger = 1.5x original size) */
+  padding: 24px 48px;       /* 1.5 * 16px (24px) and 1.5 * 32px (48px) */
+  min-width: 300px;         /* 1.5 * 200px */
+  font-size: 1.5rem;        /* Scaling the text size proportionally */
+
+  /* 3. Original Styles (Kept) */
+  background-color: #93d50a;
   color: #ffffff;
   text-decoration: none;
   font-weight: bold;
-  border-radius: 8px; /* Modern rounded corners */
-  transition: all 0.3s ease; /* Smooth hover transition */
-  
-  /* Accessibility: Ensure large enough tap target (min 44px) */
-  min-width: 200px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
   text-align: center;
 }
+
+
 
 /* Hover & Focus States (Critical for 2026 UX) */
 .cta-button:hover {
