@@ -30,6 +30,45 @@ body {
     width: 80%; /* Scales to 80% of the screen width on mobile */
   }
 }
+/* Container adjustment for desktop flow */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem; /* Better spacing control on desktop */
+  padding: 2rem 10%; /* Centers content and prevents edge-to-edge stretching */
+  background: transparent; /* Ensures background is not blocked off */
+}
+
+.logo-container img {
+  /* RESIZING: Controlled via max-width and height auto */
+  width: 100%;
+  max-width: 140px; /* Reduced from 250px for a more subtle look */
+  height: auto;
+  
+  /* BLENDING: Makes logos integrate with the background */
+  filter: grayscale(100%); 
+  opacity: 0.6; /* Softens the look so they "blend" into the page */
+  mix-blend-mode: multiply; /* Removes white background artifacts from images */
+  
+  transition: all 0.3s ease-in-out;
+}
+
+/* INTERACTIVE: Brings back color/focus on hover */
+.logo-container img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.05); /* Subtle lift effect */
+}
+
+/* RESPONSIVE: Ensures they don't get too small on mobile */
+@media (max-width: 768px) {
+  .logo-container img {
+    max-width: 110px;
+    opacity: 0.8;
+  }
+}
 
 .hero-content h1 {
   font-size: 3rem;
