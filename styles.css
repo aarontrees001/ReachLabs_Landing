@@ -74,6 +74,11 @@ body {
   font-size: 3rem;
   margin-bottom: 15px;
 }
+.hero-content p {
+  font-size: 1.25rem;
+  line-height: 1.6; /* Adds breathing room between lines for larger text */
+  margin-bottom: 1.5rem;
+}
 
 .hero-image img {
   width: 100%;         /* Makes image fill its 50% container */
@@ -125,7 +130,7 @@ body {
 /* Styling for the text line */
 .phone-call {
   margin-top: 15px;
-  font-size: 1rem;
+  font-size: 1.25rem;
   color: #333333;
 }
 
@@ -194,6 +199,22 @@ body {
     padding: 0 20px;         /* Prevents text from touching screen edges */
   }
 }
+/* Targeted rule for paragraphs within the divider section */
+.divider-section p {
+  font-size: 1.25rem;
+  line-height: 1.25; /* Balanced spacing for the larger text size */
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  max-width: 800px;  /* Optional: keeps long lines readable at this size */
+  margin-left: auto; /* Centers the paragraph if it has a max-width */
+  margin-right: auto;
+}
+
+/* Specifically target the feature list items if you want them to match */
+.divider-section .feature-list li {
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+}
 
 /* Subheader styling */
 .section-subheader {
@@ -226,7 +247,7 @@ body {
   margin-right: 10px;
   color: #52bac3;          /* Teal color for the check */
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 /* Mobile Adaptation: Stack the bullets vertically on small screens */
@@ -343,7 +364,7 @@ body {
 .supporting-line {
   margin-top: 60px;
   font-style: italic;
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   color: #333333;
   max-width: 700px;
   margin-left: auto;
