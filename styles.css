@@ -162,17 +162,18 @@ body {
 }
 /* Apply this to every section after the Hero for consistent dividers */
 .divider-top {
-  border-top: 1px solid #e0e0e0; /* Subtle light gray line */
-  padding-top: 80px;            /* Consistent breathing room at the top */
-  padding-bottom: 80px;         /* Consistent breathing room at the bottom */
+  border-top: none;             /* Removes the line completely */
+  padding-top: 60px;            /* Reduced padding for a tighter flow between sections */
+  padding-bottom: 60px;         
+  background-color: #ffffff;    /* Ensures exact match with Hero */
 }
 
 .divider-section {
   width: 100%;
-  padding: 60px 0;           /* Creates vertical space above and below the text */
-  text-align: center;        /* Centers the H2 text horizontally */
-  border-top: 1px solid #e0e0e0; /* Optional: adds a subtle line above the section */
-  background-color: #ffffff;
+  padding: 40px 0;              /* Balanced spacing for the "Built for teams" text */
+  text-align: center;        
+  border-top: none;             /* Removes the optional line */
+  background-color: #ffffff;    /* Seamless match */
 }
 /* Update: Makes both section headers match in size and color */
 .divider-section h2, 
@@ -248,57 +249,87 @@ body {
   padding-bottom: 80px;         /* Consistent breathing room at the bottom */
 }
 
+/* Ensure the What We Do section doesn't have a background tint anymore */
 .what-we-do {
-  padding: 80px 20px;
-  background-color: #f9f9f9; /* Light contrast to the white sections */
-  text-align: center;
+  background-color: #ffffff;
+  border: none;
+  padding: 60px 0;
 }
+
 /* Update: Makes icons 4x bigger */
 .card .icon {
   font-size: 4rem;      /* Scaled up from 1rem to 4rem */
   margin-bottom: 25px;  /* Added a bit more space under the larger icon */
   display: block;
 }
-
+/* Container: centers narrower cards */
 .card-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Three equal columns */
-  gap: 30px;
-  max-width: 1100px;
-  margin: 0 auto;
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  flex-wrap: wrap; /* Allows stacking on smaller screens */
+  margin: 40px auto;
+  max-width: 1100px; /* Constrains the entire grid's width */
 }
 
 .card {
-  background: #ffffff;
-  padding: 40px 30px;
-  border: 1px solid #eee;
-  border-radius: 4px; /* Minimal rounding for a professional feel */
-  text-align: left;
+  /* SIZE: Makes cards narrower on desktop */
+  flex: 1;
+  min-width: 280px;  /* Prevents them from getting too skinny */
+  max-width: 320px;  /* Fixes the "too wide" issue on large screens */
+  
+  padding: 40px 25px;
+  border-radius: 16px;
+  box-shadow: none; 
+  border: none;
   transition: transform 0.3s ease;
 }
 
+/* GRADIENTS: Pushing the color further down to reduce the "white" feel */
+/* We use 70% color stop so the color stays solid for most of the card */
+.card:nth-child(1) {
+  background: linear-gradient(180deg, 
+    rgba(254, 170, 133, 0.25) 0%, 
+    rgba(254, 170, 133, 0.15) 70%, 
+    rgba(255, 255, 255, 0) 100%);
+}
+
+.card:nth-child(2) {
+  background: linear-gradient(180deg, 
+    rgba(75, 176, 142, 0.25) 0%, 
+    rgba(75, 176, 142, 0.15) 70%, 
+    rgba(255, 255, 255, 0) 100%);
+}
+
+.card:nth-child(3) {
+  background: linear-gradient(180deg, 
+    rgba(147, 213, 10, 0.25) 0%, 
+    rgba(147, 213, 10, 0.15) 70%, 
+    rgba(255, 255, 255, 0) 100%);
+}
+
 .card:hover {
-  transform: translateY(-5px); /* Subtle interaction for 2026 UX */
+  transform: translateY(-8px);
+  /* Hover state keeps the color more prominent */
+  filter: brightness(0.95); 
 }
 
 .card h3 {
-  font-size: 1.5rem;
-  color: #333333;
-  margin: 20px 0;
+  margin-top: 0;
+  font-size: 1.4rem;
+  font-weight: 800; /* Extra bold for better presence on the color */
 }
 
 .card ul {
-  list-style: none;
-  padding: 0;
+  padding-left: 15px;
+  text-align: left;
+  list-style-type: none; /* Modern minimalist list */
 }
 
-.card li {
-  margin-bottom: 12px;
-  color: #555;
-  font-size: 1rem;
+.card ul li {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
   line-height: 1.4;
-  position: relative;
-  padding-left: 20px;
 }
 
 /* Minimal line bullet */
@@ -324,10 +355,16 @@ body {
   .card-grid {
     grid-template-columns: 1fr; /* Stacks cards on mobile */
   }
+/* Ensure the Logos section doesn't have a background tint anymore */
+.experience {
+  background-color: #ffffff;
+  border: none;
+  padding: 60px 0;
+}
 }
 .logo-area {
   padding: 50px 0;
-  background-color: #f9f9f9; /* Optional background */
+  background-color: #ffffff; /* Optional background */
   text-align: center;
 }
 
@@ -355,17 +392,18 @@ body {
 }
 
 /* Apply this to every section after the Hero for consistent dividers */
-.divider-top {
-  border-top: 1px solid #e0e0e0; /* Subtle light gray line */
-  padding-top: 80px;            /* Consistent breathing room at the top */
-  padding-bottom: 80px;         /* Consistent breathing room at the bottom */
-}
+
 .final-cta {
   background-color: #fcfcfc; /* Slight brand accent */
   text-align: center;
   padding: 100px 20px;       /* Significant vertical space for impact */
 }
-
+.divider-top {
+  border-top: none;             /* Removes the line completely */
+  padding-top: 60px;            /* Reduced padding for a tighter flow between sections */
+  padding-bottom: 60px;         
+  background-color: #ffffff;    /* Ensures exact match with Hero */
+}
 .cta-container {
   max-width: 850px;
   margin: 0 auto;
