@@ -421,48 +421,82 @@ body {
     gap: 20px;
   }
 }
-/* Apply this to every section after the Hero for consistent dividers */
-
-.final-cta {
-  background-color: #ffffff; /* Slight brand accent */
-  text-align: center;
-  padding: 100px 20px;       /* Significant vertical space for impact */
-}
-.divider-top {
-  border-top: none;             /* Removes the line completely */
-  padding-top: 60px;            /* Reduced padding for a tighter flow between sections */
-  padding-bottom: 60px;         
-  background-color: #ffffff;    /* Ensures exact match with Hero */
-}
-.cta-container {
-  max-width: 850px;
+/* 1. The Flex Wrapper */
+.cta-flex-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 100px; /* Space between image and text */
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 80px 40px;
 }
-
+/* Matching the Final CTA Header to the Hero's H1 Style */
 .final-cta h2 {
-  font-size: 3rem;           /* Strong closing headline */
-  color: #333333;            /* Your Dark Charcoal color */
-  margin-bottom: 20px;
-  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif; /* Matches the body/hero font stack */
+  font-size: 3rem;       /* Matches the .hero-content h1 size */
+  font-weight: bold;
+  margin-bottom: 15px;   /* Matches the hero h1 spacing */
+  color: #333333;        /* Matches the body text color */
 }
 
-.cta-support {
+/* Matching the Final CTA Subtext to the Hero's Paragraph Style */
+.final-cta .cta-support {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.25rem;    /* Matches your established body paragraph size */
+  line-height: 1.6;      /* Matches established readability standards */
+  color: #333333;
+  margin-bottom: 25px;
+}
+
+/* Ensuring the Phone Call line also matches the Hero's phone styling */
+.final-cta .phone-call {
   font-size: 1.25rem;
-  color: #555555;
-  margin-bottom: 45px;       /* Space between copy and button */
-  line-height: 1.6;
+  color: #333333;
 }
 
-/* Reuses your existing .cta-button, .phone-call, and .phone-link styles */
 
-/* Responsive adjustment for 2026 mobile standards */
+/* 2. Image Side (Left) */
+.cta-image-side {
+  flex: 1;
+}
+
+.impactful-footer-img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px; /* Smooth 2026 aesthetic */
+  display: block;
+}
+
+/* 3. Content Side (Right) */
+.cta-content-side {
+  flex: 1;
+  text-align: left; /* Keeps text aligned left within the right column */
+}
+
+/* 4. Brand Colored Button */
+.brand-btn {
+  background-color: #93d50a; /* Your brand green */
+  display: inline-block; /* Reset from 'block' if needed to fit column */
+  margin: 20px 0;
+  text-transform: capitalize; /* Ensures "Book an Intro Conversation" capitalization */
+}
+
+/* 5. Phone Link Matching Top Button Color */
+.phone-link-cohesive {
+  color: #93d50a; /* Matches the button for visual cohesion */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+/* 6. Responsive Fix for Mobile */
 @media (max-width: 768px) {
-  .final-cta h2 {
-    font-size: 2.2rem;
+  .cta-flex-wrapper {
+    flex-direction: column; /* Stacks image on top of text for phones */
+    text-align: center;
   }
-  
-  .final-cta {
-    padding: 80px 20px;
+  .cta-content-side {
+    text-align: center;
   }
 }
 
