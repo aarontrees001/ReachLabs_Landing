@@ -480,6 +480,39 @@ body {
   margin: 20px 0;
   text-transform: capitalize; /* Ensures "Book an Intro Conversation" capitalization */
 }
+/* --- Final CTA Button: The "Opposite" Effect --- */
+
+.cta-button-alt {
+  /* Starts as the secondary brand color (Teal) */
+  background-color: #42bac3; 
+  color: #ffffff;
+  
+  /* Matches sizing of the top button */
+  display: inline-block;
+  padding: 18px 36px;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1.25rem;
+  transition: all 0.3s ease;
+}
+
+.cta-button-alt:hover {
+  /* Hovers to the primary brand color (Green) */
+  background-color: #93d50a; 
+  
+  /* Mirror the "lift" effect from the hero */
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure the phone number in the footer matches this "Teal" starting color for cohesion */
+.final-cta .phone-link {
+  color: #42bac3;
+  font-weight: bold;
+  text-decoration: none;
+}
+
 
 /* 5. Phone Link Matching Top Button Color */
 .phone-link-cohesive {
