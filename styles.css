@@ -127,6 +127,7 @@ body {
   outline: 3px solid #007bff; /* Clear focus indicator for keyboard users */
   outline-offset: 4px;
 }
+
 /* Styling for the text line */
 .phone-call {
   margin-top: 15px;
@@ -484,7 +485,7 @@ body {
 
 .cta-button-alt {
   /* Starts as the secondary brand color (Teal) */
-  background-color: #42bac3; 
+  background-color: #52bac3; 
   color: #ffffff;
   
   /* Matches sizing of the top button */
@@ -508,7 +509,7 @@ body {
 
 /* Ensure the phone number in the footer matches this "Teal" starting color for cohesion */
 .final-cta .phone-link {
-  color: #42bac3;
+  color: #52bac3;
   font-weight: bold;
   text-decoration: none;
 }
