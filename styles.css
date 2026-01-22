@@ -105,7 +105,7 @@ body {
   font-size: 1.5rem;        /* Scaling the text size proportionally */
 
   /* 3. Original Styles (Kept) */
-  background-color: #93d50a;
+  background-color: #52bac3;
   color: #ffffff;
   text-decoration: none;
   font-weight: bold;
@@ -118,7 +118,7 @@ body {
 
 /* Hover & Focus States (Critical for 2026 UX) */
 .cta-button:hover {
-  background-color: #42bac3; /* Slightly lighter charcoal on hover */
+  background-color: #93d50a; /* Slightly lighter charcoal on hover */
   transform: translateY(-2px); /* Subtle lift effect */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
@@ -517,7 +517,7 @@ body {
 
 /* 5. Phone Link Matching Top Button Color */
 .phone-link-cohesive {
-  color: #93d50a; /* Matches the button for visual cohesion */
+  color: #52bac3; /* Matches the button for visual cohesion */
   text-decoration: none;
   font-weight: bold;
   font-size: 1.25rem;
