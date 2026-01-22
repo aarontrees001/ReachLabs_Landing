@@ -385,43 +385,60 @@ body {
 }
 }
 .logo-area {
-  padding: 80px 0;
+  padding: 50px 0;
   background-color: #ffffff; /* Optional background */
   text-align: center;
 }
+.logo-slider {
+  overflow: hidden;
+  width: 100%;
+  padding: 60px 0;
+  background: white;
+  /* Adds a 2026-style fade on the edges so logos don't just "cut off" */
+  -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+}
 
-.logo-container {
+.logo-track {
   display: flex;
-  justify-content: center; /* Centers logos horizontally */
-  align-items: center;     /* Centers logos vertically */
-  flex-wrap: wrap;        /* Moves logos to next line on small screens */
-  gap: 60px;              /* Spacing between logos */
-  max-width: 100%;
-  padding: 0 40px;
-  margin: 0 auto;
+  /* This width must accommodate all 10 logos (original + duplicates) */
+  width: max-content; 
+  animation: scrollLogos 30s linear infinite;
 }
 
-.logo-container img {
-  width: 250px;
-  flex-shrink: 0; 
-  min-width: 250px;          /* Increased width to 250 */
-  height: auto;           /* Maintain aspect ratio */
-  opacity: 1.0;           /* Optional: slightly faded look */
-  transition: opacity 0.3s ease;
-  filter: grayscale(0%); /* Optional: black and white effect */
+.logo-track img {
+  /* 2x Size */
+  width: 300px;
+  height: 150px;
+  object-fit: contain;
+  /* Spacing */
+  margin: 0 40px; 
+  
+  filter: grayscale(0%);
+  opacity: 100;
+  transition: transform 0.3s ease;
 }
 
-.logo-container img:hover {
-  opacity: 1;
-  filter: grayscale(0%);  /* Returns to color on hover */
+/* THE FIX: Move by exactly the width of the first 5 logos + their margins */
+/* Each logo is 300px + 80px total margin (40px left + 40px right) = 380px */
+/* 380px * 5 logos = 1900px */
+@keyframes scrollLogos {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-1900px); } 
 }
-/* Mobile Fix: Prevent logos from being huge on phones */
-@media (max-width: 768px) {
-  .logo-container img {
-    width: 180px; 
-    gap: 20px;
-  }
+
+.logo-slider:hover .logo-track {
+  animation-play-state: paused;
 }
+
+
+/* THE MOVEMENT: Moves the track exactly halfway (5 logos) */
+@keyframes scrollLogos {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-360px * 5)); } 
+}
+
+
 /* 1. The Flex Wrapper */
 .cta-flex-wrapper {
   display: flex;
