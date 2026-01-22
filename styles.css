@@ -6,16 +6,59 @@ body {
   color: #333333; 
 }
 .hero {
-  display: flex;
-  align-items: center; /* Centers content vertically */
-  min-height: 80vh;    /* Makes the section tall */
-  background-color: #ffffff;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Forces two perfectly equal 50% columns */
+  align-items: center;           /* Vertical centering */
+  min-height: 85vh;
+  max-width: 1400px;             /* Standard 2026 wide-screen container */
+  margin: 0 auto;                /* Centers the entire hero section */
+  padding: 0 5%;                 /* Adds safety padding for the edges */
+  gap: 40px;                     /* Creates a uniform space between text and image */
 }
 
-.hero-content, .hero-image {
-  flex: 1;             /* Forces both sides to take 50% width */
-  padding: 40px;
+.hero-content {
+  text-align: left;              /* Standard for side-by-side layouts */
 }
+
+/* Forces the main logo to be proportionate */
+.logo {
+  max-width: 100%;               /* Ensures it never overflows the 50% col */
+  width: 400px;                  /* Adjusted from 800px to a balanced size */
+  height: auto;
+  margin-bottom: 24px;
+}
+
+.hero-image {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 600px;              /* Keeps the main hero image from getting too massive */
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1); /* Adds modern depth */
+}
+
+/* RESPONSIVE: Stack columns for mobile */
+@media (max-width: 992px) {
+  .hero {
+    grid-template-columns: 1fr;  /* Change to a single column */
+    text-align: center;
+    padding-top: 100px;
+    gap: 60px;
+  }
+  
+  .hero-content {
+    text-align: center;
+  }
+
+  .logo {
+    margin: 0 auto 24px;         /* Center logo on mobile */
+  }
+}
+
 
 .logo {
   /* Increased from 80px to 800px */
