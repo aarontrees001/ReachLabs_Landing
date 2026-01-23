@@ -62,7 +62,7 @@ body {
 
 .logo {
   /* Increased from 80px to 800px */
-  width: 800px; 
+  width: 700px; 
   height: auto;       /* Maintains original aspect ratio to prevent stretching */
   margin-bottom: 20px;
   display: block;      /* Helps with alignment in modern layouts */
