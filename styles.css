@@ -10,9 +10,9 @@ body {
   grid-template-columns: 1fr 1fr; /* Forces two perfectly equal 50% columns */
   align-items: center;           /* Vertical centering */
   min-height: 85vh;
-  max-width: 1400px;             /* Standard 2026 wide-screen container */
+  max-width: 1840px;             /* Standard 2026 wide-screen container */
   margin: 0 auto;                /* Centers the entire hero section */
-  padding: 0 5%;                 /* Adds safety padding for the edges */
+  padding: 2vh 5% 0;                 /* Adds safety padding for the edges */
   gap: 40px;                     /* Creates a uniform space between text and image */
 }
 
@@ -23,7 +23,7 @@ body {
 /* Forces the main logo to be proportionate */
 .logo {
   max-width: 100%;               /* Ensures it never overflows the 50% col */
-  width: 400px;                  /* Adjusted from 800px to a balanced size */
+  width: 660px;                  /* Adjusted from 800px to a balanced size */
   height: auto;
   margin-bottom: 24px;
 }
@@ -31,15 +31,15 @@ body {
 .hero-image {
   display: flex;
   justify-content: center;
-}
+ }
 
 .hero-image img {
   width: 100%;
-  max-width: 600px;              /* Keeps the main hero image from getting too massive */
+  max-width: 950px;              /* Keeps the main hero image from getting too massive */
   height: auto;
   border-radius: 12px;
   box-shadow: 0 20px 40px rgba(0,0,0,0.1); /* Adds modern depth */
-}
+ }
 
 /* RESPONSIVE: Stack columns for mobile */
 @media (max-width: 992px) {
@@ -60,13 +60,7 @@ body {
 }
 
 
-.logo {
-  /* Increased from 80px to 800px */
-  width: 700px; 
-  height: auto;       /* Maintains original aspect ratio to prevent stretching */
-  margin-bottom: 20px;
-  display: block;      /* Helps with alignment in modern layouts */
-}
+
 
 @media (max-width: 768px) {
   .logo {
@@ -124,9 +118,11 @@ body {
 }
 
 .hero-image img {
-  width: 100%;         /* Makes image fill its 50% container */
+  width: 100%;
+  max-width: 880px;         /* Makes image fill its 50% container */
   height: auto;
   border-radius: 8px;  /* Optional: rounded corners */
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1)
 }
 
 /* Responsive: Stacks them on top of each other for mobile */
