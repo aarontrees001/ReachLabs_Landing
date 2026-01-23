@@ -480,6 +480,26 @@ body {
   0% { transform: translateX(0); }
   100% { transform: translateX(calc(-360px * 5)); } 
 }
+/* --- MOBILE SPECIFIC FIXES --- */
+@media (max-width: 768px) {
+  .logo-track {
+    /* Moves exactly halfway through the 10 logos for a seamless loop */
+    animation: scrollLogosMobile 20s linear infinite !important;
+  }
+
+  .logo-track img {
+    /* Scale down for mobile: roughly 1/2 of desktop size */
+    width: 150px !important; 
+    height: 80px !important;
+    margin: 0 20px !important; /* Tighter spacing for mobile */
+    flex-shrink: 0; /* Prevents logos from squishing */
+  }
+
+  @keyframes scrollLogosMobile {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } 
+  }
+}
 
 
 /* 1. The Flex Wrapper */
