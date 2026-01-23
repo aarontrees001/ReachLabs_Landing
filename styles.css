@@ -269,7 +269,8 @@ body {
   justify-content: center; /* Centers the bullets horizontally */
   gap: 40px;               /* Space between bullet items */
   list-style: none;        /* Removes default dots */
-  padding: 0;
+  padding: 0 20;
+  box-sizing: border-box; 
   flex-wrap: wrap;         /* Allows stacking on smaller screens */
 }
 
@@ -297,6 +298,7 @@ body {
     align-items: flex-start; /* Aligns to left on mobile for readability */
     display: inline-block;   /* Keeps the group centered as a block */
     text-align: left;
+    padding: 0 30px;
   }
   
   .feature-list li {
