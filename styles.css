@@ -489,8 +489,8 @@ body {
 
   .logo-track img {
     /* Scale down for mobile: roughly 1/2 of desktop size */
-    width: 150px !important; 
-    height: 80px !important;
+    width: 300px !important; 
+    height: 160px !important;
     margin: 0 20px !important; /* Tighter spacing for mobile */
     flex-shrink: 0; /* Prevents logos from squishing */
   }
