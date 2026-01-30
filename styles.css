@@ -1,6 +1,6 @@
 body {
   /* Sets font to a modern sans-serif stack */
-  font-family: Arial, Helvetica, sans-serif; 
+  font-family: Helvetica; 
   
   /* Sets text to "Dark Charcoal" (Hex: #333333) */
   color: #333333; 
@@ -25,7 +25,7 @@ body {
   max-width: 100%;               /* Ensures it never overflows the 50% col */
   width: 660px;                  /* Adjusted from 800px to a balanced size */
   height: auto;
-  margin-bottom: 24px;
+  margin-bottom: 8px;
 }
 
 .hero-image {
@@ -56,63 +56,16 @@ body {
 
   .logo {
     margin: 0 auto 24px;         /* Center logo on mobile */
-  }
-}
-
-
-
-
-@media (max-width: 768px) {
-  .logo {
     width: 80%; /* Scales to 80% of the screen width on mobile */
-  }
-}
-/* Container adjustment for desktop flow */
-.logo-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 3rem; /* Better spacing control on desktop */
-  padding: 2rem 10%; /* Centers content and prevents edge-to-edge stretching */
-  background: transparent; /* Ensures background is not blocked off */
-}
-
-.logo-container img {
-  /* RESIZING: Controlled via max-width and height auto */
-  width: 100%;
-  max-width: 140px; /* Reduced from 250px for a more subtle look */
-  height: auto;
-  
-  /* BLENDING: Makes logos integrate with the background */
-  filter: grayscale(100%); 
-  opacity: 0.6; /* Softens the look so they "blend" into the page */
-  mix-blend-mode: multiply; /* Removes white background artifacts from images */
-  
-  transition: all 0.3s ease-in-out;
-}
-
-/* INTERACTIVE: Brings back color/focus on hover */
-.logo-container img:hover {
-  filter: grayscale(0%);
-  opacity: 1;
-  transform: scale(1.05); /* Subtle lift effect */
-}
-
-/* RESPONSIVE: Ensures they don't get too small on mobile */
-@media (max-width: 768px) {
-  .logo-container img {
-    max-width: 110px;
-    opacity: 0.8;
   }
 }
 
 .hero-content h1 {
   font-size: 3rem;
-  margin-bottom: 15px;
-}
+  line-height: .7;
+  }
 .hero-content p {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   line-height: 1.6; /* Adds breathing room between lines for larger text */
   margin-bottom: 1.5rem;
 }
@@ -170,8 +123,9 @@ body {
 /* Styling for the text line */
 .phone-call {
   margin-top: 15px;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color: #333333;
+  text-align: center;
 }
 
 /* Enhancing the clickable phone link */
@@ -347,7 +301,6 @@ body {
   border: none;
   transition: transform 0.3s ease;
 }
-
 /* GRADIENTS: Pushing the color further down to reduce the "white" feel */
 /* We use 70% color stop so the color stays solid for most of the card */
 .card:nth-child(1) {
@@ -448,7 +401,7 @@ body {
   display: flex;
   /* This width must accommodate all 10 logos (original + duplicates) */
   width: max-content; 
-  animation: scrollLogos 30s linear infinite;
+  animation: scrollLogos 45s linear infinite;
 }
 
 .logo-track img {
@@ -457,31 +410,19 @@ body {
   height: 150px;
   object-fit: contain;
   /* Spacing */
-  margin: 0 40px; 
-  
-  filter: grayscale(0%);
-  opacity: 100;
-  transition: transform 0.3s ease;
+  margin-right: 80px; 
+  flex-shrink: 0;
 }
 
-/* THE FIX: Move by exactly the width of the first 5 logos + their margins */
-/* Each logo is 300px + 80px total margin (40px left + 40px right) = 380px */
-/* 380px * 5 logos = 1900px */
 @keyframes scrollLogos {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-1900px); } 
+  100% { transform: translateX(-50%); } 
 }
 
 .logo-slider:hover .logo-track {
   animation-play-state: paused;
 }
 
-
-/* THE MOVEMENT: Moves the track exactly halfway (5 logos) */
-@keyframes scrollLogos {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(calc(-360px * 5)); } 
-}
 /* --- MOBILE SPECIFIC FIXES --- */
 @media (max-width: 768px) {
   .logo-track {
@@ -515,7 +456,7 @@ body {
 }
 /* Matching the Final CTA Header to the Hero's H1 Style */
 .final-cta h2 {
-  font-family: Arial, Helvetica, sans-serif; /* Matches the body/hero font stack */
+  font-family: Helvetica; /* Matches the body/hero font stack */
   font-size: 3rem;       /* Matches the .hero-content h1 size */
   font-weight: bold;
   margin-bottom: 15px;   /* Matches the hero h1 spacing */
@@ -524,8 +465,8 @@ body {
 
 /* Matching the Final CTA Subtext to the Hero's Paragraph Style */
 .final-cta .cta-support {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.25rem;    /* Matches your established body paragraph size */
+  font-family: Helvetica;
+  font-size: 1.5rem;    /* Matches your established body paragraph size */
   line-height: 1.6;      /* Matches established readability standards */
   color: #333333;
   margin-bottom: 25px;
@@ -533,8 +474,10 @@ body {
 
 /* Ensuring the Phone Call line also matches the Hero's phone styling */
 .final-cta .phone-call {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color: #333333;
+  text-align: left;
+  text-indent: 90px;
 }
 
 
@@ -594,7 +537,7 @@ body {
   color: #52bac3;
   font-weight: bold;
   text-decoration: none;
-}
+  }
 
 
 /* 5. Phone Link Matching Top Button Color */
@@ -603,6 +546,7 @@ body {
   text-decoration: none;
   font-weight: bold;
   font-size: 1.25rem;
+  text-align: center;
 }
 
 /* 6. Responsive Fix for Mobile */
