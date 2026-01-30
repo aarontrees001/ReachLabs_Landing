@@ -249,7 +249,7 @@ body {
 .what-we-do {
   background-color: #ffffff;
   border: none;
-  padding: none;
+  padding: 0 0 15px 0;
 }
 
 /* Update: Makes icons 4x bigger */
@@ -257,6 +257,7 @@ body {
   font-size: 4rem;      /* Scaled up from 1rem to 4rem */
   margin-bottom: 25px;  /* Added a bit more space under the larger icon */
   display: block;
+  text-align: center;
 }
 /* Container: centers narrower cards */
 .card-grid {
@@ -284,23 +285,23 @@ body {
 /* We use 70% color stop so the color stays solid for most of the card */
 .card:nth-child(1) {
   background: linear-gradient(180deg, 
-    rgba(254, 170, 133, 0.25) 0%, 
-    rgba(254, 170, 133, 0.15) 70%, 
-    rgba(255, 255, 255, 0) 100%);
+    rgba(254, 170, 133, 0.7) 0%, 
+    rgba(254, 170, 133, 0.4) 70%, 
+    rgba(255, 255, 255, 0.2) 100%);
 }
 
 .card:nth-child(2) {
   background: linear-gradient(180deg, 
-    rgba(75, 176, 142, 0.25) 0%, 
-    rgba(75, 176, 142, 0.15) 70%, 
-    rgba(255, 255, 255, 0) 100%);
+    rgba(75, 176, 142, 0.7) 0%, 
+    rgba(75, 176, 142, 0.4) 70%, 
+    rgba(255, 255, 255, 0.2) 100%);
 }
 
 .card:nth-child(3) {
   background: linear-gradient(180deg, 
-    rgba(147, 213, 10, 0.25) 0%, 
-    rgba(147, 213, 10, 0.15) 70%, 
-    rgba(255, 255, 255, 0) 100%);
+    rgba(147, 213, 10, 0.7) 0%, 
+    rgba(147, 213, 10, 0.4) 70%, 
+    rgba(255, 255, 255, 0.2) 100%);
 }
 
 .card:hover {
@@ -311,19 +312,21 @@ body {
 
 .card h3 {
   margin-top: 0;
-  font-size: 1.4rem;
-  font-weight: 800; /* Extra bold for better presence on the color */
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-align: center; /* Extra bold for better presence on the color */
 }
 
 .card ul {
   padding-left: 15px;
   text-align: left;
-  list-style-type: none; /* Modern minimalist list */
+  list-style-type: none;
+  text-align: center;
 }
 
 .card ul li {
   margin-bottom: 10px;
-  font-size: 0.95rem;
+  font-size: 1.25rem;
   line-height: 1.4;
 }
 
@@ -358,18 +361,18 @@ body {
 .experience {
   background-color: #ffffff;
   border: none;
-  padding: 60px 0;
+  padding: 10px 0;
 }
 }
 .logo-area {
-  padding: 50px 0;
+  padding: 10px 0;
   background-color: #ffffff; /* Optional background */
   text-align: center;
 }
 .logo-slider {
   overflow: hidden;
   width: 100%;
-  padding: 60px 0;
+  padding: 10px 0;
   background: white;
   /* Adds a 2026-style fade on the edges so logos don't just "cut off" */
   -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
@@ -431,7 +434,7 @@ body {
   gap: 100px; /* Space between image and text */
   max-width: 1200px;
   margin: 0 auto;
-  padding: 80px 40px;
+  padding: 30px 0;
 }
 /* Matching the Final CTA Header to the Hero's H1 Style */
 .final-cta h2 {
@@ -448,43 +451,41 @@ body {
   font-size: 1.5rem;    /* Matches your established body paragraph size */
   line-height: 1.6;      /* Matches established readability standards */
   color: #333333;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 /* Ensuring the Phone Call line also matches the Hero's phone styling */
 .final-cta .phone-call {
   font-size: 1.5rem;
   color: #333333;
-  text-align: left;
-  text-indent: 90px;
+  text-align: center;
+  text-indent: none;
 }
 
-
-/* 2. Image Side (Left) */
+/* Container for the image - now matches the content side */
 .cta-image-side {
   flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.impactful-footer-img {
+/* Make the image actually fill that 50% space */
+.cta-image-side img {
   width: 100%;
   height: auto;
-  border-radius: 12px; /* Smooth 2026 aesthetic */
-  display: block;
+  max-width: 500px; /* Adjust this to control how 'large' it feels */
+  object-fit: contain;
 }
 
-/* 3. Content Side (Right) */
+/* Your existing content side */
 .cta-content-side {
   flex: 1;
-  text-align: left; /* Keeps text aligned left within the right column */
+  text-align: center;
 }
 
-/* 4. Brand Colored Button */
-.brand-btn {
-  background-color: #93d50a; /* Your brand green */
-  display: inline-block; /* Reset from 'block' if needed to fit column */
-  margin: 20px 0;
-  text-transform: capitalize; /* Ensures "Book an Intro Conversation" capitalization */
-}
+
 /* --- Final CTA Button: The "Opposite" Effect --- */
 
 .cta-button-alt {
@@ -494,7 +495,7 @@ body {
   
   /* Matches sizing of the top button */
   display: inline-block;
-  padding: 18px 36px;
+  padding: 20px;
   font-weight: bold;
   border-radius: 8px;
   text-decoration: none;
@@ -516,6 +517,7 @@ body {
   color: #52bac3;
   font-weight: bold;
   text-decoration: none;
+  text-align: center;
   }
 
 
