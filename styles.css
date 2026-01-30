@@ -85,6 +85,15 @@ body {
     flex-direction: column;
     text-align: center;
   }
+  @media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.2rem;     /* Slightly smaller font for mobile screens */
+    line-height: 1.2;      /* Increased from .6 to prevent letters crashing */
+    word-spacing: 0.15rem; /* Adds space between words */
+    letter-spacing: 0.02rem; /* Optional: adds space between letters */
+  }
+}
+
 }
 
 .cta-button {
