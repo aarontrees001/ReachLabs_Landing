@@ -12,7 +12,7 @@ body {
   min-height: 85vh;
   max-width: 1840px;             /* Standard 2026 wide-screen container */
   margin: 0 auto;                /* Centers the entire hero section */
-  padding: 2vh 5% 0;                 /* Adds safety padding for the edges */
+  padding: 0 5% 0;                 /* Adds safety padding for the edges */
   gap: 40px;                     /* Creates a uniform space between text and image */
 }
 
