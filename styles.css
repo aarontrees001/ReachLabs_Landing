@@ -441,7 +441,7 @@ body {
   display: flex;
   align-items: center;
   gap: 100px; /* Space between image and text */
-  max-width: 1200px;
+  max-width: 1600px;
   margin: 0 auto;
   padding: 30px 0;
 }
@@ -469,29 +469,35 @@ body {
   font-size: 1.5rem;
   color: #333333;
   text-align: center;
-  text-indent: none;
+  text-indent: 80px;
+  width: 100%;
+  padding-right: 40px
 }
 
 /* Container for the image - now matches the content side */
 .cta-image-side {
   flex: 1;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-end;
+  margin-left: calc((100vw - 100%) / -2);
+
 }
 
 /* Make the image actually fill that 50% space */
 .cta-image-side img {
   width: 100%;
-  height: auto;
-  max-width: 500px; /* Adjust this to control how 'large' it feels */
-  object-fit: contain;
+  height: 100%;
+  max-width: none; /* Adjust this to control how 'large' it feels */
+  object-fit: cover;
 }
 
 /* Your existing content side */
 .cta-content-side {
   flex: 1;
-  text-align: center;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 
@@ -526,19 +532,20 @@ body {
   color: #52bac3;
   font-weight: bold;
   text-decoration: none;
-  text-align: center;
+  text-align: left;
+  padding-right: 40px;
   }
-
-
 /* 5. Phone Link Matching Top Button Color */
 .phone-link-cohesive {
   color: #52bac3; /* Matches the button for visual cohesion */
   text-decoration: none;
   font-weight: bold;
-  font-size: 1.25rem;
-  text-align: center;
+  font-size: 1.5rem;
+  text-align: left;
   text-decoration: underline;
 }
+
+
 
 /* 6. Responsive Fix for Mobile */
 @media (max-width: 768px) {
