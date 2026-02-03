@@ -557,3 +557,8 @@ body {
     text-align: center;
   }
 }
+@media screen and (min-width: 1601px) {
+  .cta-image-side {
+    margin-left: calc((100vw - 100%) / -2);
+  }
+}
