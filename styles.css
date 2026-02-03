@@ -617,7 +617,20 @@ body {
 /* 6. Responsive Fix for Mobile */
 @media (max-width: 768px) {
   .cta-flex-wrapper {
-    flex-direction: column; 
+    flex-direction: column;
+    gap: 30px; 
+    padding: 20px 0;
+  }
+   .cta-image-side {
+    /* Reset the desktop negative margin so it doesn't pull the image off-center */
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0; /* Ensures no extra space under the image div */
+       }
+   .cta-image-side img {    /* Set a reasonable height for mobile so it doesn't push the text too far down */
+    max-height: 250px; 
+    width: auto;
+    margin: 0 auto;
   }
   /* Media query to center Final CTA heading on mobile */
 @media screen and (max-width: 768px) {
@@ -626,6 +639,7 @@ body {
     width: 100%; /* Ensures the heading uses the full container width to align properly */
     margin-left: auto;
     margin-right: auto;
+    
   }
 }
 
