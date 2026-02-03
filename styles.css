@@ -494,8 +494,8 @@ body {
     margin: 0 20px !important; /* Tighter spacing for mobile */
     flex-shrink: 0; /* Prevents logos from squishing */
   }
+}
 
- /* 1. The Flex Wrapper */
 .cta-flex-wrapper {
   display: flex;
   flex-direction: row;
@@ -541,8 +541,6 @@ body {
   flex: 1;
   display: flex;
   justify-content: flex-end;
-  margin-left: calc((100vw - 100%) / -2);
-
 }
 
 /* Make the image actually fill that 50% space */
