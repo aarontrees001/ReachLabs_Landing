@@ -293,14 +293,22 @@ body {
   border: none;
   padding: 0 0 15px 0;
 }
-
-/* Update: Makes icons 4x bigger */
 .card .icon {
-  font-size: 4rem;      /* Scaled up from 1rem to 4rem */
-  margin-bottom: 25px;  /* Added a bit more space under the larger icon */
+  /* 1. Set the size (4rem is approx 64px, adjust as needed) */
+  width: 80px; 
+  height: auto;
+
+  /* 2. Horizontal centering */
   display: block;
-  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+
+  /* 3. Space below the icon */
+  margin-bottom: 25px;
 }
+
+
+
 /* Container: centers narrower cards */
 .card-grid {
   display: flex;
