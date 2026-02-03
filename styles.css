@@ -439,6 +439,7 @@ body {
 /* 1. The Flex Wrapper */
 .cta-flex-wrapper {
   display: flex;
+  flex-direction: row;
   align-items: center;
   gap: 100px; /* Space between image and text */
   max-width: 1600px;
@@ -544,21 +545,9 @@ body {
   text-align: left;
   text-decoration: underline;
 }
-
-
-
 /* 6. Responsive Fix for Mobile */
 @media (max-width: 768px) {
   .cta-flex-wrapper {
-    flex-direction: column; /* Stacks image on top of text for phones */
-    text-align: center;
-  }
-  .cta-content-side {
-    text-align: center;
-  }
-}
-@media screen and (min-width: 1601px) {
-  .cta-image-side {
-    margin-left: calc((100vw - 100%) / -2);
+    flex-direction: column; 
   }
 }
