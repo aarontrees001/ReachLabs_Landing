@@ -91,6 +91,7 @@ body {
   font-size: 1.5rem;
   line-height: 1.6; /* Adds breathing room between lines for larger text */
   margin-bottom: 1.5rem;
+  font-weight: 525;
 }
 
 .hero-image img {
@@ -126,8 +127,8 @@ body {
   margin: 25px auto 0;      /* Top: 25px, Sides: auto (centers it), Bottom: 0 */
   
   /* 2. Sizing (.5x bigger = 1.5x original size) */
-  padding: 24px 48px;       /* 1.5 * 16px (24px) and 1.5 * 32px (48px) */
-  min-width: 300px;         /* 1.5 * 200px */
+  padding: 20px 40px;       /* 1.5 * 16px (24px) and 1.5 * 32px (48px) */
+  min-width: 225px;         /* 1.5 * 200px */
   font-size: 1.5rem;        /* Scaling the text size proportionally */
 
   /* 3. Original Styles (Kept) */
@@ -160,6 +161,7 @@ body {
   font-size: 1.5rem;
   color: #333333;
   text-align: center;
+  font-weight: 525;
 }
 
 /* Enhancing the clickable phone link */
@@ -238,12 +240,14 @@ body {
   max-width: 800px;  /* Optional: keeps long lines readable at this size */
   margin-left: auto; /* Centers the paragraph if it has a max-width */
   margin-right: auto;
+  font-weight: 525;
 }
 
 /* Specifically target the feature list items if you want them to match */
 .divider-section .feature-list li {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   margin-bottom: 15px;
+  font-weight: 525;
 }
 /* Horizontal list container */
 .feature-list {
@@ -363,29 +367,33 @@ body {
 .card h3 {
   margin-top: 0;
   font-size: 1.5rem;
-  font-weight: 800;
+  font-weight: 725;
   text-align: center; /* Extra bold for better presence on the color */
 }
 
+/* 1. Remove default bullets from the card lists */
 .card ul {
-  padding-left: 15px;
-  text-align: left;
-  list-style-type: none;
-  text-align: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.card ul li {
+.card li {
+  position: relative;
+  padding-left: 30px; /* Space for the checkmark */
   margin-bottom: 10px;
+  text-align: left;    /* Ensures text is left-aligned even if card is centered */
   font-size: 1.25rem;
-  line-height: 1.4;
 }
 
-/* Minimal line bullet */
+/* 2. Add the colored checkmark */
 .card li::before {
-  content: "—";
+  content: "\2713";    /* Unicode for checkmark */
   position: absolute;
   left: 0;
-  color: #ccc;
+  color: #4bb08e;      /* Your brand teal color */
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 
 .supporting-line {
@@ -400,6 +408,7 @@ body {
  /* 2026 Mobile Safety: Prevents text from touching screen edges */
   padding: 0 20px; 
   box-sizing: border-box;
+  font-weight: 575;
 }
 
 /* Mobile Responsive */
@@ -474,11 +483,6 @@ body {
   flex-shrink: 0;
 }
 
-@keyframes scrollLogos {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); } 
-}
-
 .logo-slider:hover .logo-track {
   animation-play-state: paused;
 }
@@ -532,11 +536,13 @@ body {
   color: #333333;
   margin-bottom: 10px;
   text-align: center;
+  font-weight: 515;
 }
 
 /* Ensuring the Phone Call line also matches the Hero's phone styling */
 .final-cta .phone-call {
   font-size: 1.5rem;
+  font-weight: 515;
   color: #333333;
   text-align: center;
   text-indent: 80px;
@@ -584,7 +590,7 @@ body {
   font-weight: bold;
   border-radius: 8px;
   text-decoration: none;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   transition: all 0.3s ease;
 }
 
