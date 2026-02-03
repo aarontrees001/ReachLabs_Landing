@@ -88,7 +88,7 @@ body {
   @media (max-width: 768px) {
   .hero-content h1 {
     font-size: 2.2rem;     /* Slightly smaller font for mobile screens */
-    line-height: 1.2;      /* Increased from .6 to prevent letters crashing */
+    line-height: 0.8;      /* Increased from .6 to prevent letters crashing */
     word-spacing: 0.15rem; /* Adds space between words */
     letter-spacing: 0.02rem; /* Optional: adds space between letters */
   }
@@ -148,25 +148,34 @@ body {
 /* Mobile-Specific Adaptations (Media Query) */
 @media (max-width: 768px) {
   .hero {
+    display: flex;
     flex-direction: column; /* Stacks image and text vertically */
     text-align: center;
-    padding: 20px;
+    padding: 40px 20px;
+    gap: 30px
   }
 
   .logo {
-    width: 60%; /* Scales down the 10x logo so it fits on mobile screens */
+    width: 60%;
+    max-width: 250px;
     margin: 0 auto 20px;
-    transform: scale(2); /* Visually doubles the size */
+    transform: scale(1.5); /* Visually doubles the size */
   }
 
   .cta-button {
     width: 100%; /* Makes button full-width for easier thumb tapping */
     box-sizing: border-box;
+    max-width: 350px; /* Keeps button from being awkwardly wide */
+    margin: 20px auto;
   }
 
   .phone-link {
     display: inline-block;
-    padding: 10px 0; /* Increases tap target size to meet 2026 accessibility standards */
+    padding: 10px 0; 
+  }
+   .phone-call {
+    text-align: center;
+    width: 100%;
   }
 }
 
