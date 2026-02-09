@@ -321,49 +321,42 @@ body {
   max-width: 1100px; /* Constrains the entire grid's width */
 }
 
-/* Styling for all cards in the section */
 .card {
-  /* SIZE: Makes cards narrower on desktop */
   flex: 1;
-  min-width: 280px;  /* Prevents them from getting too skinny */
+  min-width: 280px;
   max-width: 320px;
   padding: 40px 25px;
   border-radius: 16px;
-  box-shadow: none; 
-  border: none;
-  transition: transform 0.3s ease;
+  
+  /* The Border around everything */
+  border: 2px solid #e0e0e0; 
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
-/* GRADIENTS: Pushing the color further down to reduce the "white" feel */
-/* We use 70% color stop so the color stays solid for most of the card */
+/* 2. Hard-Stop Gradients (Top Color / Bottom White) */
+/* Adjust the percentage (e.g., 45%) to control where the color ends */
 .card:nth-child(1) {
-  background: linear-gradient(0deg, 
-    rgba(254, 170, 133, 1) 0%, 
-    rgba(254, 170, 133, 0.4) 70%, 
-    rgba(255, 255, 255, 0.2) 100%);
+  background: linear-gradient(to bottom, rgba(254, 170, 133, 0.5) 50%, #ffffff 45%);
 }
 
 .card:nth-child(2) {
-  background: linear-gradient(0deg, 
-    rgba(75, 176, 142, 0.7) 0%, 
-    rgba(75, 176, 142, 0.4) 70%, 
-    rgba(255, 255, 255, 0.2) 100%);
+  background: linear-gradient(to bottom, rgba(75, 176, 142, 0.5) 50%, #ffffff 45%);
 }
 
 .card:nth-child(3) {
-  background: linear-gradient(0deg, 
-    rgba(147, 213, 10, 0.7) 0%, 
-    rgba(147, 213, 10, 0.4) 70%, 
-    rgba(255, 255, 255, 0.2) 100%);
+  background: linear-gradient(to bottom, rgba(147, 213, 10, 0.5) 50%, #ffffff 45%);
 }
-
-
-
 
 .card:hover {
   transform: translateY(-8px);
   /* Hover state keeps the color more prominent */
-  filter: brightness(0.95); 
+  filter: brightness(0.95);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); 
 }
 
 .card h3 {
@@ -377,7 +370,7 @@ body {
 .card ul {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: top 20px;
 }
 
 .card li {
